@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href='http://fonts.googleapis.com/css?family=Nixie+One' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.min.css') }}">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="{{ url_for('static', filename='js/main.min.js') }}"></script>
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<title>Word Unscrambler</title>
+</head>
+<body OnLoad="document.form1.anagram_input.focus();">
+<form name="form1" method="post">
+	<input type="text" class="inputBox" name="anagram_input"><br>
+	{% if current_anagrams and previous_anagrams %}
+	<input type="hidden" name="previous_anagrams" value="{{ current_anagrams }}<hr/>{{ previous_anagrams }}">
+	{% else %}
+	<input type="hidden" name="previous_anagrams" value="{{ current_anagrams }}{{ previous_anagrams }}">
+	{% endif %}
+</form>
+<div id="wordContainer">
+	{% if current_anagrams %}
+	<div class="wordnew">{{ current_anagrams }}
+		<div class="wordold">
+			{% if previous_anagrams %}<hr/>{% endif %}
+			{{ previous_anagrams }}
+		</div>
+	</div>
+	{% else %}
+	<div class="wn_nadd">{{ previous_anagrams }}</div>
+	{% endif %}
+</div>
+<div id="infoButton"><i>i</i></div>
+<div id="infoBox">
+	<div class="closeBox"></div>
+	<div class="githubLogo" onclick="location.href='https://github.com/1995eaton/code/tree/master/flask/unscrambler/'"></div>
+	<div class="githubLink"><a href="https://github.com/1995eaton/code/tree/master/flask/unscrambler/">GitHub Source</a></div>
+</div>
+</body>
+</html>
