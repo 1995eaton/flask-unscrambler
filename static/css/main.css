@@ -1,194 +1,200 @@
 #infoBox {
-	-moz-transition:border-color .3s ease-in-out;
-	-webkit-transition:border-color .3s ease-in-out;
-	background-color:rgba(0,0,0,0.7);
-	border-left:2px solid #FFF;
-	border-top:2px solid #FFF;
-	border-top-left-radius:8px;
-	bottom:0;
-	height:150px;
-	position:fixed;
-	right:-177px;
-	transition:border-color .3s ease-in-out;
-	width:175px;
+	-moz-transition: border-color .3s ease-in-out;
+	-webkit-transition: border-color .3s ease-in-out;
+	background-color: rgba(0,0,0,0.7);
+	border-left: 2px solid #FFF;
+	border-top: 2px solid #FFF;
+	border-top-left-radius: 8px;
+	bottom: 0;
+	height: 150px;
+	position: fixed;
+	right: -177px;
+	transition: border-color .3s ease-in-out;
+	width: 175px;
 }
 
 #infoBox:hover {
-	border-color:#4775FF;
+	border-color: #4775FF;
 }
 
-#infoBox:hover .closeBox,.closeBox:hover {
-	background-color:#4775FF;
+#infoBox:hover .closeBox, .closeBox:hover {
+	background-color: #4775FF;
 }
 
 #infoButton {
-	-moz-transition:color .3s ease-in-out;
-	-webkit-transition:color .3s ease-in-out;
-	bottom:13px;
-	color:#FFF;
-	cursor:default;
-	font-size:24pt;
-	height:25px;
-	opacity:0.7;
-	position:fixed;
-	right:10px;
-	transition:color .3s ease-in-out;
-	width:10px;
+	-moz-transition: color .3s ease-in-out;
+	-webkit-transition: color .3s ease-in-out;
+	bottom: 13px;
+	color: #FFF;
+	cursor: default;
+	font-size: 24pt;
+	height: 25px;
+	opacity: 0.7;
+	position: fixed;
+	right: 10px;
+	transition: color .3s ease-in-out;
+	width: 10px;
 }
 
-#infoButton:hover,a:hover {
-	color:#4775FF;
+#infoButton:hover, a:hover {
+	color: #4775FF;
 }
 
 #wordContainer {
-	-moz-box-shadow:inset 0 0 10px rgba(0,0,0,0.6);
-	-moz-transition:border-color .3s ease-in-out;
-	-webkit-box-shadow:inset 0 0 10px rgba(0,0,0,0.6);
-	-webkit-transition:border-color .3s ease-in-out;
-	background-color:rgba(0,0,0,0.6);
-	border-left:2px solid rgba(255,255,255,0.5);
-	border-right:2px solid rgba(255,255,255,0.5);
-	border-top:2px solid rgba(255,255,255,0.5);
-	border-top-left-radius:8px;
-	border-top-right-radius:8px;
-	bottom:0;
-	box-shadow:inset 0 0 10px rgba(0,0,0,0.6);
-	color:#FFF;
-	font-family:'Nixie One', cursive;
-	font-size:18px;
-	left:0;
-	overflow-y:auto;
-	position:absolute;
-	right:0;
-	text-align:center;
-	top:145px;
-	transition:border-color .3s ease-in-out;
-	width:800px;
-	margin:0 auto;
+	-moz-box-shadow: inset 0 0 10px rgba(0,0,0,0.6);
+	-moz-transition: border-color .3s ease-in-out;
+	-webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.6);
+	-webkit-transition: border-color .3s ease-in-out;
+	background-color: rgba(0,0,0,0.6);
+	border-left: 2px solid rgba(255,255,255,0.5);
+	border-right: 2px solid rgba(255,255,255,0.5);
+	border-top: 2px solid rgba(255,255,255,0.5);
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	bottom: 0;
+	box-shadow: inset 0 0 10px rgba(0,0,0,0.6);
+	color: #FFF;
+	font-family: 'Nixie One', cursive;
+	font-size: 20px;
+	left: 0;
+	overflow-y: auto;
+	bottom: 0;
+	position: absolute;
+	right: 0;
+	height: 80%;
+	text-align: center;
+	/*top: 145px;*/
+	transition: border-color .3s ease-in-out;
+	width: 65%;
+	margin: 0 auto;
 }
 
 .closeBox {
-	-moz-transition:background-color .3s ease-in-out;
-	-webkit-transition:background-color .3s ease-in-out;
-	background-color:#FFF;
-	border-bottom-right-radius:5.85px;
-	border-top-left-radius:5.85px;
-	height:20px;
-	left:-2px;
-	position:absolute;
-	top:-2px;
-	transition:background-color .3s ease-in-out;
-	width:20px;
+	-moz-transition: background-color .3s ease-in-out;
+	-webkit-transition: background-color .3s ease-in-out;
+	background-color: #FFF;
+	border-bottom-right-radius: 5.85px;
+	border-top-left-radius: 5.85px;
+	height: 20px;
+	left: -2px;
+	position: absolute;
+	top: -2px;
+	transition: background-color .3s ease-in-out;
+	width: 20px;
 }
 
 .githubLink {
-	bottom:5px;
-	font-size:18pt;
-	position:absolute;
-	text-align:center;
-	width:100%;
-	transition:color .3s ease-in-out;
-	-moz-transition:color .3s ease-in-out;
-	-webkit-transition:color .3s ease-in-out;
+	bottom: 5px;
+	font-size: 18pt;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	transition: color .3s ease-in-out;
+	-moz-transition: color .3s ease-in-out;
+	-webkit-transition: color .3s ease-in-out;
 }
 
 .githubLink:hover {
-	color:#4775FF;
+	color: #4775FF;
 }
 
 .githubLogo {
-	cursor:pointer;
-	-moz-transition:background-image .3s ease-in-out;
-	-webkit-transition:background-image .3s ease-in-out;
-	background-image:url(../images/github.png);
-	background-position:center;
-	background-repeat:no-repeat;
-	border-radius:90px;
-	height:65px;
-	left:0;
-	position:relative;
-	right:0;
-	top:20px;
-	transition:background-image .3s ease-in-out;
-	width:68px;
-	margin:0 auto;
-	padding:10px;
+	cursor: pointer;
+	-moz-transition: background-image .3s ease-in-out;
+	-webkit-transition: background-image .3s ease-in-out;
+	background-image: url(../images/github.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 90px;
+	height: 65px;
+	left: 0;
+	position: relative;
+	right: 0;
+	top: 20px;
+	transition: background-image .3s ease-in-out;
+	width: 68px;
+	margin: 0 auto;
+	padding: 10px;
 }
 
 .githubLogo:hover {
-	background-image:url(../images/github_hover.png);
+	background-image: url(../images/github_hover.png);
 }
 
 .inputBox {
-	-moz-transition:border-color .3s ease-in-out;
-	-webkit-font-smoothing:subpixel-antialiased;
-	-webkit-transition:border-color .3s ease-in-out;
-	background-color:rgba(0,0,0,0.7);
-	border:2px solid rgba(255,255,255,0.5);
-	border-radius:4px;
-	box-shadow:inset 0 0 10px rgba(0,0,0,0.6);
-	color:#FFF;
-	font-family:'Nixie One', cursive;
-	font-size:20px;
-	height:45px;
-	left:0;
-	opacity:0.7;
-	outline:none;
-	overflow:hidden;
-	position:absolute;
-	right:0;
-	text-align:center;
-	top:50px;
-	transition:border-color .3s ease-in-out;
-	width:800px;
-	margin:0 auto;
+	-moz-transition: border-color .3s ease-in-out;
+	-webkit-font-smoothing: subpixel-antialiased;
+	-webkit-transition: border-color .3s ease-in-out;
+	background-color: rgba(0,0,0,0.7);
+	border: 2px solid rgba(255,255,255,0.5);
+	border-radius: 4px;
+	box-shadow: inset 0 0 10px rgba(0,0,0,0.6);
+	color: #FFF;
+	font-family: 'Nixie One', cursive;
+	font-size: 30px;
+	height: 80px;
+	left: 0;
+	top: 40px;
+	opacity: 0.7;
+	outline: none;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	transition: border-color .3s ease-in-out;
+	width: 65%;
+	margin: 0 auto;
 }
 
-.inputBox:hover,#wordContainer:hover {
-	border-color:rgba(71,117,255,0.5);
+.inputBox:hover, #wordContainer:hover {
+	border-color: rgba(71,117,255,1);
 }
 
 .wn_nadd {
-	left:0;
-	padding-top:30px;
-	position:absolute;
-	right:0;
-	width:500px;
-	margin:0 auto;
+	left: 0;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	position: absolute;
+	right: 0;
+	width: 60%;
+	margin: 0 auto;
 }
 
 .wordnew {
-	left:0;
-	padding-top:0;
-	position:absolute;
-	right:0;
-	width:500px;
-	margin:0 auto;
+	left: 0;
+	padding-top: 0;
+	padding-bottom: 30px;
+	position: absolute;
+	right: 0;
+	width: 60%;
+	margin: 0 auto;
 }
 
 .wordold {
-	left:0;
-	position:absolute;
-	right:0;
-	width:500px;
-	margin:0 auto;
+	left: 0;
+	position: absolute;
+	padding-bottom: 30px;
+	right: 0;
+	width: 60%;
+	margin: 0 auto;
 }
 
 a {
-	color:#FFF;
-	text-decoration:none;
-	transition:color .3s ease-in-out;
+	color: #FFF;
+	text-decoration: none;
+	transition: color .3s ease-in-out;
 }
 
 a:visited {
-	color:#FFF;
+	color: #FFF;
 }
 
 body {
-	background-image:url(../images/background.png);
-	overflow-y:hidden;
+	background-image: url(../images/background.png);
+	overflow-y: hidden;
 }
 
 hr {
-	width:100px;
+	width: 20px;
+	opacity: 0.3;
 }
