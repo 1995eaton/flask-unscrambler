@@ -1,3 +1,4 @@
+@import url('http://fonts.googleapis.com/css?family=Nixie+One');
 #infoBox {
 	-moz-transition: border-color .3s ease-in-out;
 	-webkit-transition: border-color .3s ease-in-out;
@@ -6,15 +7,20 @@
 	border-top: 2px solid #FFF;
 	border-top-left-radius: 8px;
 	bottom: 0;
-	height: 150px;
+	height: 160px;
 	position: fixed;
-	right: -177px;
+	right: -192px;
 	transition: border-color .3s ease-in-out;
-	width: 175px;
+	width: 190px;
 }
+
 
 #infoBox:hover {
 	border-color: #4775FF;
+}
+
+#infoBox:hover .githubLogo {
+	background-image: url(../images/github_hover.png);
 }
 
 #infoBox:hover .closeBox, .closeBox:hover {
@@ -27,13 +33,14 @@
 	bottom: 13px;
 	color: #FFF;
 	cursor: default;
-	font-size: 24pt;
-	height: 25px;
+	font-size: 28pt;
+	height: 28px;
 	opacity: 0.7;
+	font-style: italic;
 	position: fixed;
 	right: 10px;
 	transition: color .3s ease-in-out;
-	width: 10px;
+	width: 12px;
 }
 
 #infoButton:hover, a:hover {
@@ -90,6 +97,8 @@
 	text-align: center;
 	width: 100%;
 	transition: color .3s ease-in-out;
+	-moz-transition: background-image .3s ease-in-out;
+	-webkit-transition: background-image .3s ease-in-out;
 	-moz-transition: color .3s ease-in-out;
 	-webkit-transition: color .3s ease-in-out;
 }
@@ -110,7 +119,7 @@
 	left: 0;
 	position: relative;
 	right: 0;
-	top: 20px;
+	top: 30px;
 	transition: background-image .3s ease-in-out;
 	width: 68px;
 	margin: 0 auto;
@@ -150,17 +159,7 @@
 	border-color: rgba(71,117,255,1);
 }
 
-.wn_nadd {
-	left: 0;
-	padding-top: 30px;
-	padding-bottom: 30px;
-	position: absolute;
-	right: 0;
-	width: 60%;
-	margin: 0 auto;
-}
-
-.wordnew {
+.listAnagrams, .listAnagrams_static {
 	left: 0;
 	padding-top: 0;
 	padding-bottom: 30px;
@@ -170,13 +169,8 @@
 	margin: 0 auto;
 }
 
-.wordold {
-	left: 0;
-	position: absolute;
-	padding-bottom: 30px;
-	right: 0;
-	width: 60%;
-	margin: 0 auto;
+.listAnagrams_static {
+	top: 30px;
 }
 
 a {
