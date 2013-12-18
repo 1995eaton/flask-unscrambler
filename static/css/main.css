@@ -68,9 +68,9 @@
 	bottom: 0;
 	position: absolute;
 	right: 0;
-	height: 80%;
+	height: 100%;
 	text-align: center;
-	/*top: 145px;*/
+	top: 164px;
 	transition: border-color .3s ease-in-out;
 	width: 65%;
 	margin: 0 auto;
