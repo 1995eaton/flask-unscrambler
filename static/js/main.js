@@ -9,7 +9,9 @@ $(document).ready(function() {
 		$("#infoBox").animate({'right': '+=192'}, 500);
 	});
 	$('.closeBox,.inputBox').click(function() {
-		$("#infoButton").animate({"right": "+=25"}, 500);
-		$("#infoBox").animate({"right": "-=192"}, 500);
+      if ($("#infoBox").position().left != window.innerWidth) {
+         $("#infoButton").animate({"right": "+=25"}, 500);
+         $("#infoBox").animate({"right": "-=192"}, 500);
+      }
 	});
 });

@@ -8,18 +8,20 @@
 <title>Word Unscrambler</title>
 </head>
 <body>
-<form name="form" method="post">
-	<input type="text" class="inputBox" name="inputAnagrams">
-	<input type="hidden" name="previousAnagrams" value="{{ anagrams }}">
-</form>
-<div id="wordContainer">
-	<div class={% if static %}"listAnagrams_static"{% else %}"listAnagrams"{% endif %}>{{ anagrams|safe }}</div>
-</div>
-<div id="infoButton">i</div>
-<div id="infoBox">
-	<div class="closeBox"></div>
-	<div class="githubLogo"></div>
-	<div class="githubLink"><a href="https://github.com/1995eaton/flask-unscrambler">GitHub Source</a></div>
+<div id="main">
+   <form name="form" method="post">
+      <input type="text" class="inputBox" name="inputAnagrams">
+      <input type="hidden" name="previousAnagrams" value="{{ anagrams }}">
+   </form>
+   <div id="wordContainer">
+      <div class={% if static %}"listAnagrams_static"{% else %}"listAnagrams"{% endif %}>{{ anagrams|safe }}</div>
+   </div>
+   <div id="infoButton">i</div>
+   <div id="infoBox">
+      <div class="closeBox"></div>
+      <div class="githubLogo"></div>
+      <div class="githubLink"><a href="https://github.com/1995eaton/flask-unscrambler">GitHub Source</a></div>
+   </div>
 </div>
 </body>
 </html>
