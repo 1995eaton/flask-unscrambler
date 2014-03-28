@@ -13,9 +13,9 @@ def unscrambleWord():
         return render_template('index.html')
     if request.method == 'POST':
         key = ''.join(sorted(''.join([i for i in request.form['letters'].lower() if i.isalpha()])))
-        if key in dictionary:
+        try:
             return dictionary[key]
-        else:
+        except KeyError:
             return ""
 
 if __name__ == "__main__":

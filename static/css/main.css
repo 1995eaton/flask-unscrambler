@@ -23,7 +23,13 @@
   transition: border-color 0.3s ease-in-out, color .3s ease-in-out, right 0.35s ease-out;
   -moz-transition: border-color 0.3s ease-in-out, color .3s ease-in-out, right 0.35s ease-out;
   -webkit-transition: border-color 0.3s ease-in-out, color .3s ease-in-out, right 0.35s ease-out;
-  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
   background-color: black;
   border-left: 2px solid rgba(255,255,255,0.5);
   border-top: 2px solid rgba(255,255,255,0.5);
@@ -85,6 +91,7 @@
   -webkit-transition: background-color .3s ease-in-out;
   transition: background-color .3s ease-in-out;
   background-color: #fff;
+  cursor: pointer;
   border-bottom-right-radius: 2px;
   height: 20px;
   left: -2px;
@@ -125,9 +132,6 @@
 }
 #github-logo:hover  {
   background-image: url(../images/github_hover.png);
-}
-#github-logo:hover + #github-link > a {
-  color: #ff0054;
 }
 #input {
   transition: border-color .3s ease-in-out;

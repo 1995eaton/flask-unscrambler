@@ -6,10 +6,12 @@ import sys
 from itertools import combinations
 
 wmap = {key: value for key, value in reader(open("dictionary"))}
-letters = argv[1][0:15]
+letters = argv[1][0:20]
 for r in range(0, len(letters) - 1):
-    comb = set(list(combinations(letters, len(letters) - r)))
+    comb = set(["".join(sorted(i)) for i in list(combinations(letters, len(letters) - r))])
     for i in comb:
         s = "".join(sorted(i))
-        if s in wmap:
-            sys.stdout.write("\n".join(wmap[s].split(",")))
+        try:
+            sys.stdout.write(wmap[s] + "\n")
+        except KeyError:
+            pass
