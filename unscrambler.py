@@ -15,6 +15,11 @@ def unscrambleWord():
         key = ''.join(sorted(''.join([i for i in request.form['letters'].lower() if i.isalpha()])))
         if key in dictionary:
             return dictionary[key]
+        else:
+            return ""
 
 if __name__ == "__main__":
-    app.run()
+    try:
+        app.run()
+    except KeyboardInterrupt:
+        raise SystemExit
