@@ -1,27 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="{{ url_for('static', filename='js/main.js') }}"></script>
-<meta charset="utf-8">
-<title>Word Unscrambler</title>
+  <link rel="stylesheet" type="text/css" href="../static/css/main.css">
+  <script src="../static/js/main.js"></script>
+  <meta charset="utf-8">
+  <title>Word Unscrambler</title>
 </head>
 <body>
-<div id="main">
-   <form name="form" method="post">
-      <input type="text" class="inputBox" name="inputAnagrams">
-      <input type="hidden" name="previousAnagrams" value="{{ anagrams }}">
-   </form>
-   <div id="wordContainer">
-      <div class={% if static %}"listAnagrams_static"{% else %}"listAnagrams"{% endif %}>{{ anagrams|safe }}</div>
-   </div>
-   <div id="infoButton">i</div>
-   <div id="infoBox">
-      <div class="closeBox"></div>
-      <div class="githubLogo"></div>
-      <div class="githubLink"><a href="https://github.com/1995eaton/flask-unscrambler">GitHub Source</a></div>
-   </div>
-</div>
+ <form name="form" onsubmit="send(); return false">
+    <input type="text" id="input">
+ </form>
+ <div id="word-container">
+   <div id="anagrams"></div>
+ </div>
+ <div id="info-button">i</div>
+ <div id="info-box">
+    <div id="close-box"></div>
+    <div id="github-logo" onclick="window.location = 'https://github.com/1995eaton/flask-unscrambler'"></div>
+    <div id="github-link"><a href="https://github.com/1995eaton/flask-unscrambler">GitHub Source</a></div>
+ </div>
 </body>
 </html>

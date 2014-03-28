@@ -1,19 +1,68 @@
-var animationSpeed = 300;
+var input, wordBox, infoBox;
 
-$(document).ready(function() {
-  document.form.inputAnagrams.focus();
-  $('.githubLogo').click( function() {
-    window.location='https://github.com/1995eaton/flask-unscrambler';
-  });
-  $(".listAnagrams").animate({'top': '+=30'}, 200);
-  $("#infoButton").click(function() {
-    $("#infoButton").animate({"right": "-=25"}, animationSpeed);
-    $("#infoBox").animate({'right': '+=192'}, animationSpeed);
-  });
-  $('.closeBox,.inputBox').click(function() {
-    if ($("#infoBox").position().left != window.innerWidth) {
-      $("#infoButton").animate({"right": "+=25"}, animationSpeed);
-      $("#infoBox").animate({"right": "-=192"}, animationSpeed);
+Object.prototype.slideDown = function(start, end, duration) {
+  var i = 0;
+  var delta = Math.abs(end - start);
+  var offset = 0;
+  var direction = start < end ? 1 : -1;
+  end *= direction;
+  function loop() {
+    offset = start + direction * delta * Math.sin(i / duration * (Math.PI / 2));
+    wordBox.style.top = start + offset + "px";
+    if (direction * offset < end) {
+      requestAnimationFrame(loop);
     }
-  });
+    i++;
+  }
+  loop();
+};
+
+function send() {
+  if (input.value.trim() === "")
+    return;
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", document.URL);
+  var formData = new FormData();
+  formData.append("letters", input.value);
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      if (xhr.responseText.trim() !== "") {
+        wordBox.style.top = "0px";
+        wordBox.innerHTML = xhr.responseText + "<br>" + wordBox.innerHTML;
+        wordBox.slideDown(-12, 12, 20);
+      }
+    }
+  }
+  xhr.send(formData);
+  input.value = "";
+}
+
+var info = {
+  mousedown: function() {
+    infoBox.main.style.right = "0";
+    infoBox.open.style.right = "-50px";
+  }
+};
+
+var close = {
+  mousedown: function() {
+    infoBox.main.style.right = "-190px";
+    infoBox.open.style.right = "0";
+  }
+};
+
+function InfoBox(main, open, close) {
+  this.main  = main;
+  this.open  = open;
+  this.close = close;
+  return this;
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  input = document.getElementById("input");
+  wordBox = document.getElementById("anagrams");
+  infoBox = new InfoBox(document.getElementById("info-box"), document.getElementById("info-button"), document.getElementById("close-box"));
+  infoBox.open.addEventListener("mousedown", info.mousedown);
+  infoBox.close.addEventListener("mousedown", close.mousedown);
+  input.focus();
 });
