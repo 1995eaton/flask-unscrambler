@@ -18,22 +18,22 @@ Object.prototype.slideDown = function(start, end, duration) {
 };
 
 function send() {
-  if (input.value.trim() === "")
-    return;
-  var xhr = new XMLHttpRequest();
-  xhr.open("POST", document.URL);
-  var formData = new FormData();
-  formData.append("letters", input.value);
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState === 4 && xhr.status === 200) {
-      if (xhr.responseText.trim().length > 1) {
-        wordBox.style.top = "0px";
-        wordBox.innerHTML = xhr.responseText + "<br>" + wordBox.innerHTML;
-        wordBox.slideDown(-12, 12, 20);
+  if (input.value.trim().length > 1) {
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", document.URL);
+    var formData = new FormData();
+    formData.append("letters", input.value);
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        if (xhr.responseText.trim() !== "") {
+          wordBox.style.top = "0px";
+          wordBox.innerHTML = xhr.responseText + "<br>" + wordBox.innerHTML;
+          wordBox.slideDown(-12, 12, 20);
+        }
       }
     }
+    xhr.send(formData);
   }
-  xhr.send(formData);
   input.value = "";
 }
 
