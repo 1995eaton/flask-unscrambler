@@ -4,11 +4,12 @@
   <link rel="stylesheet" type="text/css" href="../static/css/main.css">
   <script src="../static/js/main.js"></script>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
   <title>Word Unscrambler</title>
 </head>
 <body>
  <form name="form" onsubmit="send(); return false">
-    <input type="text" id="input">
+    <input type="text" autocapitalize="off" autocorrect="off" id="input">
  </form>
  <div id="word-container">
    <div id="anagrams"></div>

@@ -41,6 +41,9 @@ var info = {
   mousedown: function() {
     infoBox.main.style.right = "0";
     infoBox.open.style.right = "-50px";
+  },
+  touchend: function() {
+    this.mousedown();
   }
 };
 
@@ -48,6 +51,9 @@ var close = {
   mousedown: function() {
     infoBox.main.style.right = "-190px";
     infoBox.open.style.right = "0";
+  },
+  touchend: function() {
+    this.mousedown();
   }
 };
 
@@ -61,8 +67,15 @@ function InfoBox(main, open, close) {
 document.addEventListener("DOMContentLoaded", function() {
   input = document.getElementById("input");
   wordBox = document.getElementById("anagrams");
-  infoBox = new InfoBox(document.getElementById("info-box"), document.getElementById("info-button"), document.getElementById("close-box"));
-  infoBox.open.addEventListener("mousedown", info.mousedown);
-  infoBox.close.addEventListener("mousedown", close.mousedown);
+  var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  if (window.innerWidth > 400) {
+    infoBox = new InfoBox(document.getElementById("info-box"), document.getElementById("info-button"), document.getElementById("close-box"));
+    infoBox.open.addEventListener("mousedown", info.mousedown);
+    infoBox.close.addEventListener("mousedown", close.mousedown);
+    if (isMobile) {
+      infoBox.open.addEventListener("touchend", info.touchend);
+      infoBox.close.addEventListener("touchend", close.touchend);
+    }
+  } else document.getElementById("info-button").style.display = "none";
   input.focus();
 });

@@ -59,6 +59,7 @@
   left: 0; right: 0;
   position: absolute;
   margin: 0 auto;
+  min-width: 300px;
   box-sizing: border-box;
   min-height: 300px;
   height: 80%;
@@ -140,6 +141,7 @@
   font-size: 30px;
   height: 10%;
   min-height: 40px;
+  min-width: 300px;
   top: 5%;
   opacity: 0.7;
   outline: none;
@@ -169,9 +171,13 @@ body  {
   -moz-font-smoothing: subpixel-antialiased;
   font-smoothing: subpixel-antialiased;
   font-family: Helvetica Neue, Helvetica, "Lucidia Grande", Arial;
-  min-height: 400px;
   overflow: hidden;
 }
+
+html {
+  overflow:hidden;
+}
+
 hr  {
   width: 20px;
   opacity: 0.3;
