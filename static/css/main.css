@@ -14,10 +14,10 @@
   width: 190px;
 }
 #info-box:hover  {
-  border-color: #4775ff;
+  border-color: #ff0054;
 }
 #info-box:hover #close-box, #close-box:hover  {
-  background-color: #4775ff;
+  background-color: #ff0054;
 }
 #info-button  {
   transition: border-color 0.3s ease-in-out, color .3s ease-in-out, right 0.35s ease-out;
@@ -38,8 +38,8 @@
 }
 
 #info-button:hover, a:hover  {
-  color: #4775ff;
-  border-color: #4775ff;
+  color: #ff0054;
+  border-color: #ff0054;
 }
 #word-container {
   -moz-transition: border-color .3s ease-in-out;
@@ -103,7 +103,7 @@
   -webkit-transition: color .3s ease-in-out;
 }
 #github-link:hover  {
-  color: #4775ff;
+  color: #ff0054;
 }
 #github-logo  {
   cursor: pointer;
@@ -127,7 +127,7 @@
   background-image: url(../images/github_hover.png);
 }
 #github-logo:hover + #github-link > a {
-  color: #4775ff;
+  color: #ff0054;
 }
 #input {
   transition: border-color .3s ease-in-out;
@@ -155,7 +155,16 @@
   margin: 0 auto;
 }
 #input:hover, #word-container:hover  {
-  border-color: rgba(71,117,255,1);
+  border-color: #ff0054;
+}
+::selection {
+	background: #ff0054;
+}
+::-webkit-selection {
+  background: #ff0054;
+}
+::-moz-selection {
+	background: #ff0054;
 }
 a {
   color: #fff;
