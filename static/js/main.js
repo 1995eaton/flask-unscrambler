@@ -26,7 +26,7 @@ function send() {
   formData.append("letters", input.value);
   xhr.onreadystatechange = function() {
     if (xhr.readyState === 4 && xhr.status === 200) {
-      if (xhr.responseText.trim() !== "") {
+      if (xhr.responseText.trim().length > 1) {
         wordBox.style.top = "0px";
         wordBox.innerHTML = xhr.responseText + "<br>" + wordBox.innerHTML;
         wordBox.slideDown(-12, 12, 20);
