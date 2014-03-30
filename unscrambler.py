@@ -1,11 +1,10 @@
-from flask import Flask, request, render_template
+from flask import Flask, request
 import os
 import csv
 
 app = Flask(__name__)
 
 dictionary = {key: value for key, value in csv.reader(open("dictionary"))}
-
 
 @app.route('/unscramble', methods=['POST'])
 def unscrambleWord():
@@ -15,8 +14,7 @@ def unscrambleWord():
     except KeyError:
         return ""
 
-if __name__ == "__main__":
-    try:
-        app.run()
-    except KeyboardInterrupt:
-        raise SystemExit
+try:
+    app.run()
+except KeyboardInterrupt:
+    raise SystemExit
