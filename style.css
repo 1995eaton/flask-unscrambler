@@ -117,7 +117,7 @@
   transition: background-image .3s ease-in-out;
   -moz-transition: background-image .3s ease-in-out;
   -webkit-transition: background-image .3s ease-in-out;
-  background-image: url(../images/github.png);
+  background-image: url(images/github.png);
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 90px;
@@ -131,32 +131,7 @@
   padding: 10px;
 }
 #github-logo:hover  {
-  background-image: url(../images/github_hover.png);
-}
-#input {
-  transition: border-color .3s ease-in-out;
-  -moz-transition: border-color .3s ease-in-out;
-  -webkit-transition: border-color .3s ease-in-out;
-  background-color: rgba(0,0,0,0.7);
-  border: 2px solid rgba(255,255,255,0.5);
-  border-radius: 2px;
-  box-shadow: inset 0 0 10px rgba(0,0,0,0.6);
-  color: #fff;
-  font-size: 30px;
-  height: 10%;
-  min-height: 40px;
-  min-width: 300px;
-  top: 5%;
-  opacity: 0.7;
-  outline: none;
-  left: 0; right: 0;
-  position: absolute;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-  box-sizing: border-box;
-  width: 60%;
-  margin: 0 auto;
+  background-image: url(images/github_hover.png);
 }
 #input:hover, #word-container:hover  {
   border-color: #ff0054;
@@ -179,7 +154,7 @@ a {
 }
 body  {
   color: #fff;
-  background-image: url(../images/background.png);
+  background-image: url(images/background.png);
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-font-smoothing: subpixel-antialiased;
   font-smoothing: subpixel-antialiased;

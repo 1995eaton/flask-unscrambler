@@ -20,7 +20,7 @@ Object.prototype.slideDown = function(start, end, duration) {
 function send() {
   if (input.value.trim().length > 1) {
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", document.URL);
+    xhr.open("POST", document.URL + "unscramble");
     var formData = new FormData();
     formData.append("letters", input.value);
     xhr.onreadystatechange = function() {
@@ -64,18 +64,16 @@ function InfoBox(main, open, close) {
   return this;
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-  input = document.getElementById("input");
-  wordBox = document.getElementById("anagrams");
-  var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-  if (window.innerWidth > 400) {
-    infoBox = new InfoBox(document.getElementById("info-box"), document.getElementById("info-button"), document.getElementById("close-box"));
-    infoBox.open.addEventListener("mousedown", info.mousedown);
-    infoBox.close.addEventListener("mousedown", close.mousedown);
-    if (isMobile) {
-      infoBox.open.addEventListener("touchend", info.touchend);
-      infoBox.close.addEventListener("touchend", close.touchend);
-    }
-  } else document.getElementById("info-button").style.display = "none";
-  input.focus();
-});
+input = document.getElementById("input");
+wordBox = document.getElementById("anagrams");
+var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+if (window.innerWidth > 400) {
+  infoBox = new InfoBox(document.getElementById("info-box"), document.getElementById("info-button"), document.getElementById("close-box"));
+  infoBox.open.addEventListener("mousedown", info.mousedown);
+  infoBox.close.addEventListener("mousedown", close.mousedown);
+  if (isMobile) {
+    infoBox.open.addEventListener("touchend", info.touchend);
+    infoBox.close.addEventListener("touchend", close.touchend);
+  }
+} else document.getElementById("info-button").style.display = "none";
+input.focus();

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Word Unscrambler</title>
+  <style>
+    #input {
+      background-color: rgba(0,0,0,0.7);
+      border: 2px solid rgba(255,255,255,0.5);
+      border-radius: 2px;
+      box-shadow: inset 0 0 10px rgba(0,0,0,0.6);
+      color: #fff;
+      font-size: 30px;
+      height: 10%;
+      min-height: 40px;
+      min-width: 300px;
+      top: 5%;
+      opacity: 0.7;
+      outline: none;
+      left: 0; right: 0;
+      position: absolute;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      box-sizing: border-box;
+      width: 60%;
+      margin: 0 auto;
+    }
+  </style>
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+      var s = document.createElement("script");
+      s.src = "main.js";
+      document.getElementsByTagName("head")[0].appendChild(s);
+  }, false);
+  </script>
+  <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-46384202-1','1995eaton.com');ga('send','pageview');</script>
+</head>
+<body>
+ <form name="form" onsubmit="send(); return false">
+    <input type="text" autocapitalize="off" autocorrect="off" id="input">
+ </form>
+ <div id="word-container">
+   <div id="anagrams"></div>
+ </div>
+ <div id="info-button">i</div>
+ <div id="info-box">
+    <div id="close-box"></div>
+    <div id="github-logo" onclick="window.location = 'https://github.com/1995eaton/flask-unscrambler'"></div>
+    <div id="github-link"><a href="https://github.com/1995eaton/flask-unscrambler">GitHub Source</a></div>
+ </div>
+</body>
+</html>
+<link rel="stylesheet" href="style.css">
+<link rel="shortcut icon" href="favicon.png">
