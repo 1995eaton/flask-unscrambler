@@ -14,7 +14,8 @@ def unscrambleWord():
     except KeyError:
         return ""
 
-try:
-    app.run()
-except KeyboardInterrupt:
-    raise SystemExit
+if __name__ == '__main__':
+    try:
+        app.run()
+    except KeyboardInterrupt:
+        raise SystemExit
